@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="4.0" method="upgrade" group="hikashoppayment">
+	<name>HikaShop ArionPay crypto payment plugin</name>
+	<creationDate>2026-11-14</creationDate>
+	<version>1.0.0</version>
+	<author>ArionPay</author>
+	<authorEmail>info@arionpay.com</authorEmail>
+	<authorUrl>https://arionpay.com</authorUrl>
+	<copyright>(C) 2026 ArionPay</copyright>
+	<license>MIT</license>
+	<description>Crypto payments (Bitcoin, USDT, Litecoin, Ethereum, TRON and more) through ArionPay. The money goes straight to your own wallet. Set it up in HikaShop: System, Payment methods, New, ArionPay.</description>
+	<files>
+		<filename plugin="arionpay">arionpay.php</filename>
+		<filename>arionpay_end.php</filename>
+		<filename>index.html</filename>
+		<filename>README.md</filename>
+		<filename>LICENSE</filename>
+		<folder>lib</folder>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+		<param name="pluginoptions" type="pluginoptions" default="plugin" label="hikashop" description="HikaShop options" />
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field id="pluginoptions" name="pluginoptions" type="pluginoptions" label="hikashop" description="HikaShop options" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
